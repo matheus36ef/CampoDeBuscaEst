@@ -1,4 +1,6 @@
 console.log("I LOVE JESUS");
+//Arquivo para teste: 
+//Para executalo, retirar o comentario da chamada desse arquivo no ./public/index.html
 
 
 
@@ -63,7 +65,8 @@ for (obj of array) {
 }
 console.log(arrayTeste); */
 
-const dadosTratados = [
+//Teste de filtragem
+const users = [
     {
         nome: 'matheus Estevanato',
         id: 256,
@@ -80,16 +83,65 @@ const dadosTratados = [
         nome: 'maira',
         id: 259,
     },
+    {
+        nome: 'Bartolomeu',
+        id: 259,
+    },
+    {
+        nome: 'Igor',
+        id: 259,
+    },
+    {
+        nome: 'Carlos',
+        id: 259,
+    },
+    {
+        nome: 'Amanda',
+        id: 259,
+    },
 ];
+
+//Filtrando dados de busca
+//serviço
+/* class filterService {
+    async execute(dadosBase) {
+        const verific = await test(){
+            if(/\b\/)
+        }
+    }
+} */
+
+/*
 const value = "ma";
-/* const filteredUsers = users.filter((user) =>
+ const filteredUsers = users.filter((user) =>
   user.nome.toLocaleLowerCase().includes(value.toLocaleLowerCase())
-); */
-//------
+);
 
-const filter = dadosTratados.filter((dadoTratado) => 
-        dadoTratado.nome.toLocaleLowerCase().includes(value.toLocaleLowerCase())
-    );
+console.log(filteredUsers); 
+*/
+// Teste de ordem alfabetica
+//sort()
+/*
+const alfa = users.sort((a, b) => {
+    if(a.nome > b.nome) {
+        return 1
+    }else if (b.nome > a.nome){
+        return -1
+    }else {
+        return 0
+    }
 
-/* console.log(filteredUsers);  */
-console.log(filter); 
+})
+
+
+
+const alfa = users.sort((a, b) => {
+    return (a.nome > b.nome) ? 1 : ((b.nome > a.nome) ? -1 : 0);
+}) */
+
+
+
+console.log("Alfa:");
+console.log(alfa);
+
+

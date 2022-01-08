@@ -24,7 +24,7 @@ async function handle() {
     const dadosBase = await service.execute();
 
 
-    console.log(dadosBase)
+    
     tratamento(dadosBase);
     return dadosBase
 }
@@ -32,35 +32,31 @@ async function handle() {
 //tratando os dados recebidos para busca
 function tratamento(dados) {
     dadosTratados = dados.map((item) => {
-        console.log("chegou no matheus()");
         return {
             id: item.id,
             nome: item.fantasyName,
             cover: item.cover,
+            desconto: item.discountAmount,
  
         }
     })
     
 }
 //--------------------------------------------------------------------------------------------
-//Filtrando dados de busca
-//serviço
-/* class filterService {
-    async execute(dadosBase) {
-        const verific = await test(){
-            if(/\b\/)
-        }
-    }
-} */
+
 //--------------------------------------------------------------------------------------------
 //Filtrando o array de acordo com a pesquisa
 function filtro(value) {
     //const value = "ma";
-    const filter = dadosTratados.filter((dadoTratado) => 
+    let filter = dadosTratados.filter((dadoTratado) => 
         dadoTratado.nome.toLocaleLowerCase().includes(value.toLocaleLowerCase())
     );
-    console.log("Valor do filtro: " + value);
-    console.log(filter);
+
+    //passando para ordem 
+    filter = filter.sort((a, b) => {
+        return (a.nome > b.nome) ? 1 : ((b.nome > a.nome) ? -1 : 0);
+    })
+
     return filter;
 }
 //--------------------------------------------------------------------------------------------
@@ -72,20 +68,19 @@ const DOM = {
         const ul = document.createElement("ul");
         ul.innerHTML = DOM.innerHTML(tipes);
 
-        console.log(ul);
         DOM.local.appendChild(ul);
     },
 
     //Mascara
     innerHTML(tipes) {
         const urlImage = `https://clube-static.clubegazetadopovo.com.br/${tipes.cover}`
-        console.log(urlImage);
         const html = `
             <li class="sugestoes">
             <a href="#" 
             onclick="complete()">
                 <p>${tipes.nome}</p>
                 <img src="${urlImage}" alt="Icone" width="50px">
+                <p>${tipes.desconto}% de Desconto</p>
             </a>
             </li>
         `
@@ -110,15 +105,12 @@ function reload() {//Não utilizando ainda
 
 const App = {
     init() {
-        console.log("Ligado");
-
         //Pegando os caracteres que o usuário digitar.
         const pesquisa = document.querySelector("#caixaCampoBusca #campoBusca #input");
         const pesquisaValue = pesquisa.value;
 
         //filtrando o array
         let filtrado = filtro(pesquisaValue)
-        console.log(filtrado);
         
 
         //Add no HTML as sugestões.

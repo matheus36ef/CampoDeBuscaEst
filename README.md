@@ -1,6 +1,16 @@
 Projeto para processo seletivo.
 Requisitado por Alex.
  
+- Foi adicionado o express apenas para criar um servidor, e rodar no vercel.
+Para executar o servidor na propria maquina:
+
+yarn dev
+
+OBS: Dependendo do tempo, irei criar uma maneira de ao clicar, ir para uma pagina. Ou aparecer algo com mais detalhes sobre o estabelecimento. 
+Por exempo: O endereço, se está aberto ou fechado.
+Esses dados não estão no JSON, será falsos.
+
+
 <h2> Pedido </h2>
 Desenvolver um layout front end para mostrar uma lista de estabelecimentos. Os estabelecimentos devem ser consumidos do seguinte JSON: 
 
@@ -31,3 +41,4 @@ Seja criativo;
 
  
 Att, 
+
