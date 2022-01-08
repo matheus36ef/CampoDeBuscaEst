@@ -63,7 +63,7 @@ for (obj of array) {
 }
 console.log(arrayTeste); */
 
-const users = [
+const dadosTratados = [
     {
         nome: 'matheus Estevanato',
         id: 256,
@@ -82,8 +82,14 @@ const users = [
     },
 ];
 const value = "ma";
-const filteredUsers = users.filter((user) =>
+/* const filteredUsers = users.filter((user) =>
   user.nome.toLocaleLowerCase().includes(value.toLocaleLowerCase())
-);
+); */
+//------
 
-console.log(filteredUsers); 
+const filter = dadosTratados.filter((dadoTratado) => 
+        dadoTratado.nome.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+    );
+
+/* console.log(filteredUsers);  */
+console.log(filter); 

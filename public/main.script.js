@@ -59,6 +59,8 @@ function filtro(value) {
     const filter = dadosTratados.filter((dadoTratado) => 
         dadoTratado.nome.toLocaleLowerCase().includes(value.toLocaleLowerCase())
     );
+    console.log("Valor do filtro: " + value);
+    console.log(filter);
     return filter;
 }
 //--------------------------------------------------------------------------------------------
@@ -122,8 +124,8 @@ const App = {
         //Add no HTML as sugestões.
         let n = 0;
         for (obj of filtrado) {
-            if(n <= 10){
-                DOM.addSugestao(dadosTratados[n]);
+            if(n <= 5){
+                DOM.addSugestao(filtrado[n]);
                 n++;
             }
         }
