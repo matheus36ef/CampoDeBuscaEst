@@ -34,7 +34,9 @@ header h1 {
     justify-content: center;
 }
 .container {
-    width: min(80vw, 710px);
+    
+    width: 55%;
+
     transition-timing-function: ease;
 }
 #campoBusca {
@@ -123,13 +125,13 @@ header h1 {
 
 @media(max-width: 930px) {
     .container {
-        width: min(20vw, 710px);
+        width: 30%;
         transition: 1s;
     }
 }
 @media(max-width: 500px) {
     .container {
-       width: 19vw;
+        width: 20%;
        font-size: 2
     }
     #campoBusca input {
