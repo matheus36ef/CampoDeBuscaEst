@@ -3,3 +3,163 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --sombra: rgb(76, 51, 95);
+    --SombraFundo: rgb(119, 140, 165);
+}
+
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif; 
+    background: var(--SombraFundo);
+}
+
+header{
+    background: rgb(97, 28, 123);
+    
+    padding: 2rem 0 9rem;
+    text-align: center;
+    
+}
+header h1 {
+    font-size: 28px;
+    color: rgb(174, 167, 167);
+
+    font-weight: 900;
+}
+
+#body {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: min(80vw, 710px);
+    transition-timing-function: ease;
+}
+#campoBusca {
+    border: 2px solid rgb(113, 40, 191);
+    border-radius: 10px;
+    
+    background: rgb(205, 204, 213);
+
+    position: absolute;
+    margin-top: -8rem;
+    
+}
+#campoBusca:hover{
+    transition: .5s;
+    
+}
+#campoBusca input{
+    width: 550px;
+    height: 30px;
+
+    font-size: 17px;
+    outline: 0;
+    border: none;
+    border-radius: 10px;
+    
+    text-align: center;
+    text-shadow: 1px;
+
+    background: rgb(205, 204, 213);
+    
+    
+}
+#campoBusca input:hover{
+    padding: 20px;
+    transition: .3s;
+    
+}
+.sugestoes {
+    list-style-type: none;
+    margin: 9px 5px;
+    
+}
+.sugestoes a{
+    text-decoration: none;
+    display: flex;
+    border-radius: 10px;
+}
+.sugestoes a:hover{
+    box-shadow: inset 0 0 1em var(--sombra);
+    transition: .3s;
+}
+.sugestoes a img{
+    width: 50px;
+    border-radius: 10px;
+}
+
+.sugestoes a #nd {
+    margin: 3px;
+}
+.sugestoes a #nd #nome {
+    font-size: 15px;
+    color: rgb(61, 79, 95);
+
+    font-weight: bold;
+}
+.sugestoes a #nd #desconto {
+    font-size: 20px;
+    color: rgb(131, 133, 48);
+    
+}
+#campoBusca #resto{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    border: 2px;
+    padding: 5px;
+
+    font-size: 13px;
+    color: var(--SombraFundo);
+
+    font-weight: 100;
+}
+
+/*Responsividade*/
+
+@media(max-width: 930px) {
+    .container {
+        width: min(20vw, 710px);
+        transition: 1s;
+    }
+}
+@media(max-width: 500px) {
+    .container {
+       width: 19vw;
+       font-size: 2
+    }
+    #campoBusca input {
+        width: 400px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px){
+    header h1 {
+        font-size: 23px;
+    }
+    .container {
+        width: 30vw;
+        transition: 1s;
+    }
+    #campoBusca {
+        width: 260px;
+    }
+    #campoBusca input {
+        width: 250px;
+        height: 30px;
+
+        font-size: 15px;
+    }
+    .sugestoes {
+        margin: 5px;
+    }
+    .sugestoes a img {
+        width: 70px;
+    }
+    
+}

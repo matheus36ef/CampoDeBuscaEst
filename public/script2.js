@@ -111,14 +111,14 @@ const users = [
     }
 } */
 
-/*
-const value = "ma";
+
+const value = "matheus";
  const filteredUsers = users.filter((user) =>
   user.nome.toLocaleLowerCase().includes(value.toLocaleLowerCase())
 );
 
-console.log(filteredUsers); 
-*/
+ 
+
 // Teste de ordem alfabetica
 //sort()
 /*
@@ -132,16 +132,17 @@ const alfa = users.sort((a, b) => {
     }
 
 })
+*/
 
 
-
-const alfa = users.sort((a, b) => {
+const alfa = filteredUsers.sort((a, b) => {
     return (a.nome > b.nome) ? 1 : ((b.nome > a.nome) ? -1 : 0);
-}) */
+}) 
 
 
 
 console.log("Alfa:");
 console.log(alfa);
+
 
 

@@ -11,6 +11,7 @@ Por exempo: O endereço, se está aberto ou fechado.
 Esses dados não estão no JSON, será falsos.
 
 
+
 <h2> Pedido </h2>
 Desenvolver um layout front end para mostrar uma lista de estabelecimentos. Os estabelecimentos devem ser consumidos do seguinte JSON: 
 
