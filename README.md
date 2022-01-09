@@ -1,6 +1,5 @@
-Projeto para processo seletivo.
-Requisitado por Alex.
- 
+Projeto simples, um campo de busca, no qual enquanto o usuario for digitado, vai filtrando e mostrando algumas sugestões.
+
 - Foi adicionado o express apenas para criar um servidor, e rodar no vercel.
 Para executar o servidor na propria maquina:
 
