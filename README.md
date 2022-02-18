@@ -3,6 +3,8 @@ Projeto simples, um campo de busca, no qual enquanto o usuario for digitado, vai
 - Foi adicionado o express apenas para criar um servidor, e rodar no vercel.
 Para executar o servidor na propria maquina:
 
+link do projeto rodando: https://campo-de-busca-est.vercel.app/
+
 yarn dev
 
 OBS: Dependendo do tempo, irei criar uma maneira de ao clicar, ir para uma pagina. Ou aparecer algo com mais detalhes sobre o estabelecimento. 
